@@ -1,3 +1,4 @@
+# 官方实现请另外参考：https://github.com/Giveupfree/SOTDrawRect
 # SOTDrawRect
 The purpose of this repo is to provide evaluation API of Current Single Object Tracking Dataset, including
 - [x] [VOT2016](http://www.votchallenge.net/vot2016/dataset.html)
