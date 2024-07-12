@@ -73,7 +73,7 @@ class LaSOTDataset(Dataset):
     def __init__(self, name, dataset_root, load_img=False):
         super(LaSOTDataset, self).__init__(name, dataset_root)
         # with open(os.path.join(dataset_root, name+'.json'), 'r') as f:
-        with open('/home/data/LaSOTTest/LaSOT/LaSOT.json', 'r') as f:
+        with open('./SOT_eval/LaSOT.json', 'r') as f:
             meta_data = json.load(f)
             #print(meta_data, '-------------')
 
