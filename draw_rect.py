@@ -106,7 +106,7 @@ for v_idx, video in enumerate(dataset):
             os.makedirs(Rdir)
         image_dir = os.path.join(Rdir, str(idx) + '.' + args.format)
         h, w, d = img.shape
-        plt.text(20/500*w, 30/280*h, "#{:06d}".format(idx), fontdict={'color': 'yellow', 'size': math.ceil(15/math.sqrt(500*280)*math.sqrt(w*h))}) #标上第几帧
+        # plt.text(20/500*w, 30/280*h, "#{:06d}".format(idx), fontdict={'color': 'yellow', 'size': math.ceil(15/math.sqrt(500*280)*math.sqrt(w*h))}) #标上第几帧
         plt.axis('off')
         plt.savefig(image_dir, format=args.format, bbox_inches = 'tight',pad_inches = 0)
         if args.vis:
