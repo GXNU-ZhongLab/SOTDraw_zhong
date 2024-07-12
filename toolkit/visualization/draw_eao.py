@@ -55,7 +55,7 @@ def draw_eao(result):
 
     ax.set_ylim(0.8, 1.03)
     plt.show()
-    plt.savefig('/home/data/xcc23/SOTDrawRect-main/output/eao.pdf', dpi=810)
+    plt.savefig('./output/eao.pdf', dpi=810)
 
 if __name__ == '__main__':
     result = pickle.load(open("../../result.pkl", 'rb'))
