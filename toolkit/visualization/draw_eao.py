@@ -18,7 +18,7 @@ def draw_eao(result):
                 res.update({tracker_name:{}})
             res[tracker_name].update({attr:val})
     result = res
-    fig = plt.figure(figsize=(10, 10)) #9.1, 8.4
+    fig = plt.figure(figsize=(13, 11)) #9.1, 8.4
     ax = fig.add_subplot(111, projection='polar')
     angles = np.linspace(0, 2*np.pi, 16, endpoint=True)
 
@@ -45,13 +45,13 @@ def draw_eao(result):
     attr_value = []
     for attr, maxv, minv in zip(attrs, max_value, min_value):
         attr_value.append(attr + "\n({:.3f},{:.3f})".format(minv, maxv))
-    ax.set_thetagrids(angles=angles[:-1] * 180/np.pi, labels=attr_value, fontsize=14)
-    ax.tick_params(axis='x', pad=14)#属性标签远离圆心
+    ax.set_thetagrids(angles=angles[:-1] * 180/np.pi, labels=attr_value, fontsize=19)
+    ax.tick_params(axis='x', pad=18)#属性标签远离圆心
     ax.spines['polar'].set_visible(False)
-    ax.legend(loc='upper center', bbox_to_anchor=(0.5,-0.08), frameon=False, ncol=5, fontsize=13)#图例 
+    ax.legend(loc='lower center', bbox_to_anchor=(0.5, - 0.15), frameon=True, ncol=5, fontsize=19)#图例 
     ax.set_yticks([0.6,0.7,0.8,0.9,1.0])
     ax.set_yticklabels([''] * len(ax.get_yticklabels()))
-    plt.grid(True, c='gray', linestyle='--', linewidth=0.3)
+    plt.grid(True, c='gray', linestyle='--', linewidth=0.8)
 
     ax.set_ylim(0.8, 1.03)
     plt.show()
