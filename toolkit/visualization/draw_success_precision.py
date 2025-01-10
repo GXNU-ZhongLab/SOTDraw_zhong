@@ -17,8 +17,8 @@ def draw_success_precision(success_ret, name, videos, attr, precision_ret=None,
     fig, ax = plt.subplots()
     # ax.grid(b=True)
     ax.set_aspect(1)
-    plt.xlabel('Overlap threshold')
-    plt.ylabel('Success rate')
+    plt.xlabel('Overlap threshold', fontsize=14)
+    plt.ylabel('Success rate', fontsize=14)
     if attr == 'ALL':
         plt.title(r'Success plots of OPE on %s' % (name))
     else:
@@ -39,7 +39,7 @@ def draw_success_precision(success_ret, name, videos, attr, precision_ret=None,
         value = [v for k, v in success_ret[tracker_name].items() if k in videos]
         plt.plot(thresholds, np.mean(value, axis=0),
                 color=COLOR[idx], linestyle=LINE_STYLE[idx],label=label, linewidth=2)
-    ax.legend(loc='lower left', labelspacing=0.2)
+    ax.legend(loc='lower left', labelspacing=0.2, fontsize=13)
     ax.autoscale(enable=True, axis='both', tight=True)
     xmin, xmax, ymin, ymax = plt.axis()
     ax.autoscale(enable=False)
@@ -63,8 +63,8 @@ def draw_success_precision(success_ret, name, videos, attr, precision_ret=None,
         fig, ax = plt.subplots()
         # ax.grid(b=True)
         ax.set_aspect(50)
-        plt.xlabel('Location error threshold')
-        plt.ylabel('Precision')
+        plt.xlabel('Location error threshold', fontsize=14)
+        plt.ylabel('Precision', fontsize=14)
         if attr == 'ALL':
             plt.title(r'Precision plots of OPE on %s' % (name))
         else:
@@ -84,7 +84,7 @@ def draw_success_precision(success_ret, name, videos, attr, precision_ret=None,
             value = [v for k, v in precision_ret[tracker_name].items() if k in videos]
             plt.plot(thresholds, np.mean(value, axis=0),
                     color=COLOR[idx], linestyle=LINE_STYLE[idx],label=label, linewidth=2)
-        ax.legend(loc='lower right', labelspacing=0.2)
+        ax.legend(loc='lower right', labelspacing=0.2, fontsize=13)
         ax.autoscale(enable=True, axis='both', tight=True)
         xmin, xmax, ymin, ymax = plt.axis()
         ax.autoscale(enable=False)
@@ -105,8 +105,8 @@ def draw_success_precision(success_ret, name, videos, attr, precision_ret=None,
     if norm_precision_ret:
         fig, ax = plt.subplots()
         # ax.grid(b=True)
-        plt.xlabel('Location error threshold')
-        plt.ylabel('Precision')
+        plt.xlabel('Location error threshold', fontsize=14)
+        plt.ylabel('Precision', fontsize=14)
         if attr == 'ALL':
             plt.title(r'Normalized Precision plots of OPE on %s' % (name))
         else:
@@ -125,7 +125,7 @@ def draw_success_precision(success_ret, name, videos, attr, precision_ret=None,
             value = [v for k, v in norm_precision_ret[tracker_name].items() if k in videos]
             plt.plot(thresholds, np.mean(value, axis=0),
                     color=COLOR[idx], linestyle=LINE_STYLE[idx],label=label, linewidth=2)
-        ax.legend(loc='lower right', labelspacing=0.2)
+        ax.legend(loc='lower right', labelspacing=0.2, fontsize=13)
         ax.autoscale(enable=True, axis='both', tight=True)
         xmin, xmax, ymin, ymax = plt.axis()
         ax.autoscale(enable=False)
