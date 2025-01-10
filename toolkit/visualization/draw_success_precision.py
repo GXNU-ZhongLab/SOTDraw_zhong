@@ -136,5 +136,6 @@ def draw_success_precision(success_ret, name, videos, attr, precision_ret=None,
         output_path = os.path.join(save_root, attr + '-pnorm.png')
         plt.rcParams['text.usetex'] = False
         plt.savefig(output_path)
+        plt.close('all')
     return success
 
