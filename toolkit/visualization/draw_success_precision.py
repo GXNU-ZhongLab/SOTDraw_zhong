@@ -46,7 +46,7 @@ def draw_success_precision(success_ret, name, videos, attr, precision_ret=None,
     ax.set_aspect((xmax - xmin)/(ymax-ymin))
     #plt.show()
     try:
-        output_path = os.path.join(save_root, attr + '-suc.png')
+        output_path = os.path.join(save_root, attr + '-suc.pdf')
         plt.rcParams['text.usetex'] = False
         plt.savefig(output_path)
     except Exception as e:
@@ -89,9 +89,8 @@ def draw_success_precision(success_ret, name, videos, attr, precision_ret=None,
         plt.xticks(np.arange(xmin, xmax+0.01, 5))
         plt.yticks(np.arange(ymin, ymax, 0.1))
         ax.set_aspect((xmax - xmin)/(ymax-ymin))
-        #plt.show()
-        # output_path = os.path.join('/public/zhongbineng/workspace/xjx/code/SOTDrawRect-main/output/quxiantu/', attr + '-p.png')
-        output_path = os.path.join(save_root, attr + '-p.png')
+        #plt.show()        
+        output_path = os.path.join(save_root, attr + '-p.pdf')
         plt.rcParams['text.usetex'] = False
         plt.savefig(output_path)
 
@@ -131,9 +130,8 @@ def draw_success_precision(success_ret, name, videos, attr, precision_ret=None,
         plt.xticks(np.arange(xmin, xmax+0.01, 0.05))
         plt.yticks(np.arange(ymin, ymax, 0.1))
         ax.set_aspect((xmax - xmin)/(ymax-ymin))
-        #plt.show()
-        # output_path = os.path.join('/public/zhongbineng/workspace/xjx/code/SOTDrawRect-main/output/quxiantu/', attr + '-pnorm.png')
-        output_path = os.path.join(save_root, attr + '-pnorm.png')
+        #plt.show()        
+        output_path = os.path.join(save_root, attr + '-pnorm.pdf')
         plt.rcParams['text.usetex'] = False
         plt.savefig(output_path)
         plt.close('all')
