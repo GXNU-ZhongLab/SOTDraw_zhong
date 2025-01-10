@@ -4,7 +4,12 @@ import os
 
 from .draw_utils import COLOR, LINE_STYLE
 
-save_root='./output/quxiantu/' #先建好quxiantu这个文件夹（不然报错）
+save_root='./output/quxiantu/' 
+if not os.path.exists(save_root):
+    os.makedirs(save_root)  # 创建多层目录
+    print(f"Directory {save_root} was created.")
+else:
+    print(f"Directory {save_root} already exists.")
 
 def draw_success_precision(success_ret, name, videos, attr, precision_ret=None,
         norm_precision_ret=None, bold_name=None, axis=[0, 1]):
