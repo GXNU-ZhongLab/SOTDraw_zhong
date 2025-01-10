@@ -45,17 +45,17 @@ def draw_eao(result):
     attr_value = []
     for attr, maxv, minv in zip(attrs, max_value, min_value):
         attr_value.append(attr + "\n({:.3f},{:.3f})".format(minv, maxv))
-    ax.set_thetagrids(angles=angles[:-1] * 180/np.pi, labels=attr_value, fontsize=19)
+    ax.set_thetagrids(angles=angles[:-1] * 180/np.pi, labels=attr_value, fontsize=20)
     ax.tick_params(axis='x', pad=18)#属性标签远离圆心
     ax.spines['polar'].set_visible(False)
-    ax.legend(loc='lower center', bbox_to_anchor=(0.5, - 0.15), frameon=True, ncol=5, fontsize=19)#图例 
+    ax.legend(loc='lower center', bbox_to_anchor=(0.5, - 0.15), frameon=True, ncol=5, fontsize=19, handletextpad=0.01,)#图例 
     ax.set_yticks([0.6,0.7,0.8,0.9,1.0])
     ax.set_yticklabels([''] * len(ax.get_yticklabels()))
     plt.grid(True, c='gray', linestyle='--', linewidth=0.8)
 
     ax.set_ylim(0.8, 1.03)
     plt.show()
-    plt.savefig('./output/eao.pdf', dpi=810)
+    plt.savefig('./eao.pdf', dpi=810)
 
 if __name__ == '__main__':
     result = pickle.load(open("../../result.pkl", 'rb'))
