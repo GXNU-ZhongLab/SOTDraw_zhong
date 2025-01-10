@@ -17,8 +17,8 @@ def draw_success_precision(success_ret, name, videos, attr, precision_ret=None,
     fig, ax = plt.subplots()
     # ax.grid(b=True)
     ax.set_aspect(1)
-    plt.xlabel('Overlap threshold', fontsize=14)
-    plt.ylabel('Success rate', fontsize=14)
+    plt.xlabel('Overlap threshold', fontsize=16)
+    plt.ylabel('Success rate', fontsize=16)
     if attr == 'ALL':
         plt.title(r'Success plots of OPE on %s' % (name))
     else:
@@ -63,8 +63,8 @@ def draw_success_precision(success_ret, name, videos, attr, precision_ret=None,
         fig, ax = plt.subplots()
         # ax.grid(b=True)
         ax.set_aspect(50)
-        plt.xlabel('Location error threshold', fontsize=14)
-        plt.ylabel('Precision', fontsize=14)
+        plt.xlabel('Location error threshold', fontsize=16)
+        plt.ylabel('Precision', fontsize=16)
         if attr == 'ALL':
             plt.title(r'Precision plots of OPE on %s' % (name))
         else:
@@ -105,8 +105,8 @@ def draw_success_precision(success_ret, name, videos, attr, precision_ret=None,
     if norm_precision_ret:
         fig, ax = plt.subplots()
         # ax.grid(b=True)
-        plt.xlabel('Location error threshold', fontsize=14)
-        plt.ylabel('Precision', fontsize=14)
+        plt.xlabel('Location error threshold', fontsize=16)
+        plt.ylabel('Precision', fontsize=16)
         if attr == 'ALL':
             plt.title(r'Normalized Precision plots of OPE on %s' % (name))
         else:
